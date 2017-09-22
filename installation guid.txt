@@ -1,0 +1,10 @@
+go to browser and create a new database in phpMyAdmin
+database name 'ci_blog_demo' and 'utf8_general_ci' as charset
+import ci_blog_demo.sql to the phpMyadmin
+
+extract copy inside  ci_blog_demo to htdocs
+open browser 
+  for site goto  http://localhost/ci_blog_demo
+  for admin goto http://localhost/ci_blog_demo/admin
+      email    : mobin@gmail.com
+      password : mobin000
