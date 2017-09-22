@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
 		$data['variable1']= "admin controller";
 		$data['admin_login_form']=$this->load->view('admin/login_page_view',$data,true);
 		$this->load->view('admin/admin_view',$data);
-		// sojdfosdjfslkdjflsdkjfldkfj
+		// sojdfosdjfsl
 
 	}
 
