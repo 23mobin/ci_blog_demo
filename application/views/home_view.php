@@ -10,6 +10,8 @@
 <body>
   <div>
     <h1 align="center">This is Homepage</h1>
+
+
     <?= $homepage_content;?>
   </div>
 </body>
