@@ -1,3 +1,4 @@
+<!-- pin post start -->
 
 <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
   <div class="tch-img">
@@ -22,12 +23,7 @@
   <div class="clearfix"></div>
 </div>
 <div class="clearfix"></div>
-<!-- technology-top -->
-<!-- technology-top -->
-<!-- <div class="w3ls">
-    <div class="clearfix"></div>
-  </div> -->
-  <!-- technology-top -->
+<!-- pin post end -->
 
   <div class="wthree">
     <div class="col-md-6 wthree-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
