@@ -11,6 +11,29 @@ class Welcome extends CI_Controller {
 		$config['total_rows'] = count($this->welcome_model->read_published_blog());
     $config['per_page'] = 6;
     $config['uri_segment'] = 3;
+		//config for bootstrap pagination class integration
+    $config['full_tag_open'] = '<ul class="pagination pull-right">';
+    $config['full_tag_close'] = '</ul>';
+    $config['first_link'] = false;
+    $config['last_link'] = false;
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['prev_link'] = '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>';
+    $config['prev_tag_open'] = '<li class="prev">';
+    $config['prev_tag_close'] = '</li>';
+    $config['next_link'] = '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li class="active"><a href="#">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';
+
+
+
+
 		$this->pagination->initialize($config);
 		$limit = $config['per_page'];
 		$offset = $this->uri->segment(3);

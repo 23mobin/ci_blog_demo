@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- //animation-effect -->
 </head>
 <body>
-  <!-- <div><h1 align="center">This is Homepage</h1><?= $homepage_content;?></div> -->
+
   <div class="header" id="ban">
     <div class="container">
       <div class="head-left wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
@@ -88,7 +88,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <li><a href="#" class="pin"> </a></li>
           <li><a href="#" class="in"> </a></li>
           <li><a href="#" class="be"> </a></li>
-
           <li><a href="#" class="vimeo"> </a></li>
         </ul>
       </div>
@@ -97,68 +96,264 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <div class="container">
     <div class="logo wow fadeInDown animated" data-wow-duration=".8s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInDown;">
-  				<h1><a href="index.html">Mobins BLOG</a></h1>
-  				<p><label class="of"></label>LET'S MAKE A PERFECT STYLE<label class="on"></label></p>
-  			</div>
+      <h1><a href="index.html">Mobins BLOG</a></h1>
+      <p><label class="of"></label>LET'S MAKE A PERFECT STYLE<label class="on"></label></p>
+    </div>
   </div>
-
-
-  <div class="">
+  <!-- homepage wrapper start-->
+  <div class="container-fluid bg-danger">
+    <!-- Carousel wrapper start-->
     <div class="container-fluid wow fadeInUp animated">
-      <!-- <h2>Contrary to popular belief, Lorem Ipsum simply</h2>
-      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-      <a href="singlepage.html">READ MORE</a> -->
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carosul slides -->
+        <div class="carousel-inner ">
+          <div class="item  active">
+            <img src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:800px;">
+            <div class="carousel-caption " style="padding:50px;">
+              <h1>Contrary to popular</h1><br>
+              <p class="text-justify">Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam omnis tempora sint, laborum sapiente fugiat delectus vero beatae ratione a laudantium explicabo. Nam ut voluptatem eius, laboriosam tenetur consequuntur magni.</p><br>
+              <a class="btn btn-warning wow fadeInDown" href="singlepage.html">READ MORE</a>
+            </div>
+          </div>
+          <div class="item ">
+            <img  src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:800px;">
+            <div class="carousel-caption wow fadeInDown" style="padding:50px;">
+              <h1>Contrary to popular</h1><br>
+              <p class="text-justify">Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat est, eaque adipisci, repudiandae similique natus fugiat vitae hic ea, nostrum deserunt impedit quidem illo, ratione quam consequatur iste veritatis nisi.</p><br>
+              <a class="btn btn-danger" href="singlepage.html">READ MORE</a>
+            </div>
+          </div>
+          <div class="item ">
+            <img  src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:800px;">
+            <div class="carousel-caption wow fadeInDown" style="padding:50px;">
+              <h1 >Contrary to popular</h1><br>
+              <p class="text-justify">Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat est, eaque adipisci, repudiandae similique natus fugiat vitae hic ea, nostrum deserunt impedit quidem illo, ratione quam consequatur iste veritatis nisi.</p><br>
+              <a class="btn btn-danger" href="singlepage.html">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <!-- carosul Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div><!-- Carousel wrapper end -->
+    <!-- contetns start  -->
+    <div class="services w3l wow fadeInDown"  data-wow-duration=".8s" data-wow-delay="1s">
+      <div class="col-md-12 logo"style="width:100%:height:200px;"></div>
+    </div>
+    <!-- top 3 start -->
+    <div class="services w3l wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+      <div class="container">
+        <div class="grid_3 grid_5">
+          <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">FASHION</a></li>
+              <li role="presentation" class=""><a href="#safari" role="tab" id="safari-tab" data-toggle="tab" aria-controls="safari">TRAVEL</a></li>
+              <li role="presentation" class=""><a href="#trekking" role="tab" id="trekking-tab" data-toggle="tab" aria-controls="trekking">MUSIC</a></li>
+            </ul>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:380px;">
-      <div class="carousel-caption">
-        <h2>Contrary to popular</h2>
-        <p>Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s</p>
-        <a class="btn btn-warning" href="singlepage.html">READ MORE</a>
+            <div id="myTabContent" class="tab-content">
+
+              <div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
+
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/f2.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/f4.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/f3.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="clearfix"></div>
+
+              </div>
+
+
+              <div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
+
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/t1.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/t2.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/t3.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="clearfix"></div>
+
+              </div>
+
+
+              <div role="tabpanel" class="tab-pane fade active in" id="trekking" aria-labelledby="trekking-tab">
+
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/m2.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/m1.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="col-md-4 col-sm-5 tab-image">
+                  <img src="images/m3.jpg" class="img-responsive" alt="Wanderer">
+                </div>
+                <div class="clearfix"></div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- top 3 ends -->
+
+    <!-- technology-left -->
+    <div class="technology">
+      <div class="container">
+        <div class="col-md-9 technology-left">
+          <div class="tech-no">
+            <!-- technology-top -->
+            <?= $homepage_content;?>
+
+            </div>
+          </div>
+          <!-- technology-right -->
+          <div class="col-md-3 technology-right">
+            <div class="blo-top1">
+              <div class="tech-btm">
+                <div class="search-1 wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <form action="#" method="post">
+                    <input type="search" name="Search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+                    <input type="submit" value=" ">
+                  </form>
+                </div>
+                <h4>Popular Posts </h4>
+                <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <div class="blog-grid-left">
+                    <a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="blog-grid-right">
+                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <div class="blog-grid-left">
+                    <a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="blog-grid-right">
+                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <div class="blog-grid-left">
+                    <a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="blog-grid-right">
+                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <div class="blog-grid-left">
+                    <a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="blog-grid-right">
+                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <div class="blog-grid-left">
+                    <a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="blog-grid-right">
+                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="insta wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                  <h4>Instagram</h4>
+                  <ul>
+                    <li><a href="singlepage.html"><img src="images/t1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/m1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/f1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/f3.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a></li>
+                  </ul>
+                </div>
+                <p>Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro</p>
+                <div class="twt">
+                  <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-hashtag-button twitter-hashtag-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.b7de008f493a5185d8df1aedd62d77c6.en.html#button_hashtag=TwitterStories&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fp.w3layouts.com%2Fdemos%2Fduplex%2Fweb%2F&amp;size=l&amp;time=1467721486626&amp;type=hashtag" style="position: static; visibility: visible; width: 166px; height: 28px;" data-hashtag="TwitterStories"></iframe>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <!-- technology-right -->
+        </div>
+      </div><!--  contetns ends-->
+    </div><!-- homepage wrapper -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="col-md-4 footer-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+          <h4>About Me</h4>
+          <p>Consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod .</p>
+          <img src="images/t4.jpg" class="img-responsive" alt="">
+          <div class="bht1">
+            <a href="singlepage.html">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4 footer-middle wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+          <h4>Latest Tweet</h4>
+          <div class="mid-btm">
+            <p>Sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod .</p>
+            <a href="https://w3layouts.com/">https://w3layouts.com/</a>
+          </div>
+
+          <p>Consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod .</p>
+          <a href="https://w3layouts.com/">https://w3layouts.com/</a>
+
+        </div>
+        <div class="col-md-4 footer-right wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+          <h4>Newsletter</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+          <div class="name">
+            <form action="#" method="post">
+              <input type="text" placeholder="Your Name" required="">
+              <input type="text" placeholder="Your Email" required="">
+              <input type="submit" value="Subscribed Now">
+            </form>
+
+          </div>
+
+          <div class="clearfix"> </div>
+
+        </div>
+        <div class="clearfix"></div>
       </div>
     </div>
-    <div class="item">
-      <img  src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:380px;">
-      <div class="carousel-caption">
-        <h2>Contrary to popular</h2>
-        <p>Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s</p>
-        <a class="btn btn-danger" href="singlepage.html">READ MORE</a>
-      </div>
-    </div>
-    <div class="item">
-      <img src="<?= base_url('images/banner-1.jpg');?>" alt="..." style="width:100%;height:380px;">
-      <div class="carousel-caption">
-        <h2>Contrary to popular</h2>
-        <p>Lorem Ipsu took a galley oftry's standard dummy text ever since the 1500s</p>
-        <a class="btn btn-success" href="singlepage.html">READ MORE</a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div> <!-- Carousel -->
-    </div>
-  </div>
-
-  <script>
-	$('.carousel').carousel({
-		interval: 3000
-	})
-</script>
-</body>
-</html>
+    <script>
+    $('.carousel').carousel({
+      interval: 3000
+    })
+    </script>
+  </body>
+  </html>

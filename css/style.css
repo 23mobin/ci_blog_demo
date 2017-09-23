@@ -29,7 +29,7 @@ input[type="button"],input[type="submit"],li.parallelogram{
 h1,h2,h3,h4,h5,h6{
 	margin:0;
      font-family: 'Raleway', sans-serif;
-}	
+}
 p{
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
@@ -284,7 +284,7 @@ label.on{
 }
 /*--banner--*/
 .banner{
-background: url(../images/banner-1.jpg) no-repeat 0px 0px;
+/*background: url(../images/banner-1.jpg) no-repeat 0px 0px;*/
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
@@ -482,7 +482,7 @@ i.glyphicon.glyphicon-comment {
 	overflow:hidden;
 	height:32px;
 }
-.soci  ul li a{	
+.soci  ul li a{
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -666,7 +666,7 @@ i.glyphicon.glyphicon-comment {
   font-family: 'Open Sans', sans-serif;
 }
 .name form input[type="submit"] {
-  background:#fa4b2a; 
+  background:#fa4b2a;
   padding: 10px 0;
   color: #fff;
   font-size: 14px;
@@ -1415,7 +1415,7 @@ p.reply i{
 	border-radius:50%;
 	-web-kit-border-radius:50%;
 	-o-border-radius:50%;
-	-ms-border-radius:50%;	
+	-ms-border-radius:50%;
 }
 .client-message {
 	float:left;
@@ -1617,7 +1617,7 @@ span.glyphicon.glyphicon-comment, span.glyphicon.glyphicon-eye-open, span.glyphi
     margin: 2em 0 0;
 }
 .paging{
-	margin:3em 0 0; 
+	margin:3em 0 0;
 }
 .blog-grids1 {
     margin-top: 3em;
@@ -2159,7 +2159,7 @@ label.on {
 }
 .banner h2 {
     font-size: 1em;
-	
+
 }
 .banner {
     padding: 4em 0 0;
