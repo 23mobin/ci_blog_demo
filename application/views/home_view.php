@@ -13,15 +13,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta name="keywords" content="Style Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
   Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
   <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link href="<?= base_url('css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
   <!-- Custom Theme files -->
   <link href='//fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
-  <link href="css/style.css" rel='stylesheet' type='text/css' />
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link href="<?= base_url('css/style.css');?>" rel='stylesheet' type='text/css' />
+  <script src="<?= base_url('js/jquery-1.11.1.min.js');?>"></script>
+  <script src="<?= base_url('js/bootstrap.min.js');?>"></script>
   <!-- animation-effect -->
-  <link href="css/animate.min.css" rel="stylesheet">
-  <script src="js/wow.min.js"></script>
+  <link href="<?= base_url('css/animate.min.css');?>" rel="stylesheet">
+  <script src="<?= base_url('js/wow.min.js');?>"></script>
   <script>
   new WOW().init();
   </script>
@@ -166,13 +166,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
 
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/f2.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/f2.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/f4.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/f4.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/f3.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/f3.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="clearfix"></div>
 
@@ -182,13 +182,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
 
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/t1.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/t1.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/t2.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/t2.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/t3.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/t3.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="clearfix"></div>
 
@@ -198,13 +198,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <div role="tabpanel" class="tab-pane fade active in" id="trekking" aria-labelledby="trekking-tab">
 
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/m2.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/m2.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/m1.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/m1.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="images/m3.jpg" class="img-responsive" alt="Wanderer">
+                  <img src="<?= base_url('');?>images/m3.jpg" class="img-responsive" alt="Wanderer">
                 </div>
                 <div class="clearfix"></div>
 
@@ -239,7 +239,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h4>Popular Posts </h4>
                 <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <div class="blog-grid-left">
-                    <a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a>
+                    <a href="singlepage.html"><img src="<?= base_url('');?>images/t2.jpg" class="img-responsive" alt=""></a>
                   </div>
                   <div class="blog-grid-right">
                     <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
@@ -248,7 +248,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <div class="blog-grid-left">
-                    <a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a>
+                    <a href="singlepage.html"><img src="<?= base_url('');?>images/m2.jpg" class="img-responsive" alt=""></a>
                   </div>
                   <div class="blog-grid-right">
                     <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
@@ -257,7 +257,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <div class="blog-grid-left">
-                    <a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a>
+                    <a href="singlepage.html"><img src="<?= base_url('');?>images/f2.jpg" class="img-responsive" alt=""></a>
                   </div>
                   <div class="blog-grid-right">
                     <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
@@ -266,7 +266,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <div class="blog-grid-left">
-                    <a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a>
+                    <a href="singlepage.html"><img src="<?= base_url('');?>images/t3.jpg" class="img-responsive" alt=""></a>
                   </div>
                   <div class="blog-grid-right">
                     <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
@@ -275,7 +275,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <div class="blog-grid-left">
-                    <a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a>
+                    <a href="singlepage.html"><img src="<?= base_url('');?>images/m3.jpg" class="img-responsive" alt=""></a>
                   </div>
                   <div class="blog-grid-right">
                     <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
@@ -285,15 +285,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="insta wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
                   <h4>Instagram</h4>
                   <ul>
-                    <li><a href="singlepage.html"><img src="images/t1.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/m1.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/f1.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/f3.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a></li>
-                    <li><a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/t1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/m1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/f1.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/m2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/f2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/t2.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/f3.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/t3.jpg" class="img-responsive" alt=""></a></li>
+                    <li><a href="singlepage.html"><img src="<?= base_url('');?>images/m3.jpg" class="img-responsive" alt=""></a></li>
                   </ul>
                 </div>
                 <p>Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro</p>
@@ -315,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="col-md-4 footer-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
           <h4>About Me</h4>
           <p>Consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod .</p>
-          <img src="images/t4.jpg" class="img-responsive" alt="">
+          <img src="<?= base_url('');?>images/t4.jpg" class="img-responsive" alt="">
           <div class="bht1">
             <a href="singlepage.html">Read More</a>
           </div>

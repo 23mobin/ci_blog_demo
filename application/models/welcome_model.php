@@ -7,12 +7,12 @@ class Welcome_model extends CI_Model {
     return $s;
   }
 
-  public function read_published_blog(){
+  public function count_blog(){
 
     $this->db->select('*');
-    $this->db->from('demo_line');
-    $this->db->order_by('d_id','asc');
-    // $this->db->limit(6,$bad_dao+0);
+    $this->db->from('blogs');
+    $this->db->where('blog_published_status',1);
+    $this->db->order_by('blog_id','asc');
     $query_result=$this->db->get();
     $result = $query_result->result();
     return $result;
@@ -21,13 +21,34 @@ class Welcome_model extends CI_Model {
   public function read_published_blog_with_limit_ofset($limit,$ofset){
 
     $this->db->select('*');
-    $this->db->from('demo_line');
-
-    $this->db->order_by('d_id','asc');
+    $this->db->from('blogs');
+    $this->db->where('blog_published_status',1);
+    $this->db->order_by('blog_date','desc');
     $this->db->limit($limit,$ofset);
     $query_result=$this->db->get();
     $result = $query_result->result();
     return $result;
+  }
+
+  public function read_pin_blog_max_views(){
+
+    $this->db->select('*');
+    $this->db->from('blogs');
+    $this->db->where('blog_published_status',1);
+    $this->db->order_by('blog_view_counts','desc');
+    $this->db->limit(1,0);
+    $query_result=$this->db->get();
+    $result = $query_result->row();
+    return $result;
+  }
+  public function authore_name_by_id($id){
+
+    $this->db->select('name');
+    $this->db->from('admin_info');
+    $this->db->where('id',$id);
+    $query_result=$this->db->get();
+    $result = $query_result->row();
+    return $result->name;
   }
 }
 

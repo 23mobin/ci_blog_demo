@@ -8,8 +8,10 @@ class Welcome extends CI_Controller {
 		$data['variable1']= "a value from controller";
 		$this->load->library('pagination');
 		$config['base_url'] = base_url('welcome/index');
-		$config['total_rows'] = count($this->welcome_model->read_published_blog());
-    $config['per_page'] = 6;
+		$config['total_rows'] = count($this->welcome_model->count_blog());
+		// echo $config['total_rows'];
+		// exit();
+    $config['per_page'] = 5;
     $config['uri_segment'] = 3;
 		//config for bootstrap pagination class integration
     $config['full_tag_open'] = '<ul class="pagination pull-right">';
@@ -38,6 +40,7 @@ class Welcome extends CI_Controller {
 		$limit = $config['per_page'];
 		$offset = $this->uri->segment(3);
 		$data['homepage_paginations'] = $this->pagination->create_links();
+		$data['pinned_blogs'] = $this->welcome_model->read_pin_blog_max_views();
 		$data['published_blogs'] = $this->welcome_model->read_published_blog_with_limit_ofset($limit,$offset);
 		$data['homepage_content']=$this->load->view('main_site/main_content_view',$data,true);
 		$this->load->view('home_view',$data);
