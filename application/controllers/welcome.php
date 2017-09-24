@@ -50,7 +50,8 @@ class Welcome extends CI_Controller {
 	public function view_article($blog_id)
 	{
 		$data = array();
-		$data['variable2']= $this->welcome_model->method1();
+		$data['pb_b_id'] = $this->welcome_model->read_published_blog_by_id($blog_id);
+
 		$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
 		$this->load->view('home_view',$data);
 

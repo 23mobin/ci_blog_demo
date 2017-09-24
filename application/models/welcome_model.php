@@ -50,6 +50,17 @@ class Welcome_model extends CI_Model {
     $result = $query_result->row();
     return $result->name;
   }
+  public function read_published_blog_by_id($blog_id){
+
+    $this->db->select('*');
+    $this->db->from('blogs');
+    $this->db->where('blog_published_status',1);
+    $this->db->where('blog_id',$blog_id);
+    $query_result=$this->db->get();
+    $result = $query_result->row();
+    return $result;
+  }
+
 }
 
 ?>

@@ -44,7 +44,7 @@
     </div>
     <div class="col-md-6 wthree-right wow fadeInLeft"  data-wow-duration=".8s" data-wow-delay=".2s">
       <h3><a href="<?= base_url('welcome/view_article/'.$p_blog->blog_id);?>"><?= $p_blog->blog_title;?></a></h3>
-      <h6>BY <a href="<?= base_url('welcome/view_article/'.$p_blog->blog_id);?>"><?= $this->welcome_model->authore_name_by_id($p_blog->blog_authore_id);;?> </a><?= pretty_date($p_blog->blog_date);?></h6>
+      <h6>BY <a href="<?= base_url('welcome/view_article/'.$p_blog->blog_id);?>"><?= $this->welcome_model->authore_name_by_id($p_blog->blog_authore_id);?> </a><?= pretty_date($p_blog->blog_date);?></h6>
       <p><?= readmore(30,$p_blog->blog_body);?></p>
       <div class="bht1">
         <a href="<?= base_url('welcome/view_article/'.$p_blog->blog_id);?>">Read More</a>
