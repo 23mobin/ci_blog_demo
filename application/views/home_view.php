@@ -30,69 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 
   <div class="header" id="ban">
-    <div class="container">
-      <div class="head-left wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-        <div class="header-search">
-          <div class="search">
-            <input class="search_box" type="checkbox" id="search_box">
-            <label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-            <div class="search_form">
-              <form action="#" method="post">
-                <input type="text" name="Search" placeholder="Search...">
-                <input type="submit" value="Send">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header_right wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-        <nav class="navbar navbar-default ">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-            <nav class="link-effect-7" id="link-effect-7">
-              <ul class="nav navbar-nav">
-                <li class="active act"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="travel.html">Travel</a></li>
-                <li><a href="fashion.html">Fashion</a></li>
-                <!-- <li><a href="music.html">Music</a></li> -->
-                <li><a href="codes.html">Codes</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <!-- /.navbar-collapse -->
-        </nav>
-      </div>
-      <div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-        <ul>
-          <li><a href="#"> </a></li>
-          <li><a href="#" class="pin"> </a></li>
-          <li><a href="#" class="in"> </a></li>
-          <li><a href="#" class="be"> </a></li>
-          <li><a href="#" class="vimeo"> </a></li>
-        </ul>
-      </div>
-      <div class="clearfix"> </div>
-    </div>
+    <?= $navbar;?>
   </div>
   <?php if($logo_on == true):?>
     <div class="container">
@@ -108,9 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <?php if($carosul_on == true):?>
       <?= $carosul;?>
     <?php else:?>
-      <div class="banner-1">
-
-	</div>
+      <div class="banner-1"></div>
     <?php endif?>
     <!-- Carousel wrapper end -->
     <!-- contetns start  -->
@@ -118,70 +54,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="col-md-12 logo"style="width:100%:height:200px;"></div>
     </div>
     <!-- top 3 start -->
-    <div class="services w3l wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-      <div class="container">
-        <div class="grid_3 grid_5">
-          <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-            <ul id="myTab" class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">FASHION</a></li>
-              <li role="presentation" class=""><a href="#safari" role="tab" id="safari-tab" data-toggle="tab" aria-controls="safari">TRAVEL</a></li>
-              <li role="presentation" class=""><a href="#trekking" role="tab" id="trekking-tab" data-toggle="tab" aria-controls="trekking">MUSIC</a></li>
-            </ul>
-
-            <div id="myTabContent" class="tab-content">
-
-              <div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
-
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/f2.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/f4.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/f3.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="clearfix"></div>
-
-              </div>
-
-
-              <div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
-
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/t1.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/t2.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/t3.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="clearfix"></div>
-
-              </div>
-
-
-              <div role="tabpanel" class="tab-pane fade active in" id="trekking" aria-labelledby="trekking-tab">
-
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/m2.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/m1.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="col-md-4 col-sm-5 tab-image">
-                  <img src="<?= base_url('');?>images/m3.jpg" class="img-responsive" alt="Wanderer">
-                </div>
-                <div class="clearfix"></div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- top 3 ends -->
+    <?php if($top3_on == true):?>
+      <?= $top3;?>
+    <?php endif?>
+    <!-- top 3 ends -->
 
     <!-- technology-left -->
     <div class="technology">

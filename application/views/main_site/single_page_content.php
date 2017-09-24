@@ -3,7 +3,7 @@
   <!-- directed blogs -->
   <h2 class="w3"><?= $pb_b_id->blog_title?></h2>
   <div class="single">
-    <img src="<?= base_url($pb_b_id->blog_image);?>" class="img-responsive" alt="">
+    <img src="<?= base_url($pb_b_id->blog_image);?>" class="img-responsive" alt=""><hr>
     <div class="b-bottom">
       লিখেছেন <span class="text-danger text-bold top"><?= $this->welcome_model->authore_name_by_id($pb_b_id->blog_authore_id);?></span>
       <p class="sub text-justify"><?= sanitize($pb_b_id->blog_body);?></p>

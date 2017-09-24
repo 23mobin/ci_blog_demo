@@ -1,10 +1,11 @@
 <!-- pin post start -->
 
 <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+  <h1><a href="<?= base_url('welcome/view_article/'.$pinned_blogs->blog_id);?>"><?= $pinned_blogs->blog_title;?><img src="<?= base_url('images/pushpin.png');?>" alt="" height="42" width="42"></a></h1><br>
   <div class="tch-img">
     <a href="<?= base_url('welcome/view_article/'.$pinned_blogs->blog_id);?>"><img src="<?= base_url($pinned_blogs->blog_image);?>" class="img-responsive" alt=""></a>
-  </div><?= $pinned_blogs->blog_id;?>
-  <h3><a href="<?= base_url('welcome/view_article/'.$pinned_blogs->blog_id);?>"><?= $pinned_blogs->blog_title;?></a></h3>
+  </div>
+
   <h6>BY <a href="#"><?= $this->welcome_model->authore_name_by_id($pinned_blogs->blog_authore_id);?></a>
     <?= pretty_date($pinned_blogs->blog_date);?>
     <a class="span_link" href="#">
