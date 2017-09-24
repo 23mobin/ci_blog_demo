@@ -47,12 +47,13 @@ class Welcome extends CI_Controller {
 	}
 
 
-	public function page1()
+	public function view_article($blog_id)
 	{
 		$data = array();
 		$data['variable2']= $this->welcome_model->method1();
-		$data['home_page_contents']=$this->load->view('main_site/page_content',$data,true);
-		$this->load->view('master',$data);
+		$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
+		$this->load->view('home_view',$data);
+
 	}
 
 
