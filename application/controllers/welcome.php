@@ -42,6 +42,9 @@ class Welcome extends CI_Controller {
 		$data['homepage_paginations'] = $this->pagination->create_links();
 		$data['pinned_blogs'] = $this->welcome_model->read_pin_blog_max_views();
 		$data['published_blogs'] = $this->welcome_model->read_published_blog_with_limit_ofset($limit,$offset);
+    $data['logo_on'] = true;
+		$data['carosul_on'] = true;
+		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
 		$data['homepage_content']=$this->load->view('main_site/main_content_view',$data,true);
 		$this->load->view('home_view',$data);
 	}
@@ -51,6 +54,9 @@ class Welcome extends CI_Controller {
 	{
 		$data = array();
 		$data['pb_b_id'] = $this->welcome_model->read_published_blog_by_id($blog_id);
+		$data['logo_on'] = false;
+		$data['carosul_on'] = false;
+		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
 
 		$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
 		$this->load->view('home_view',$data);
