@@ -1,6 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+session_start();
 class Welcome extends CI_Controller {
+	public function __construct(){
+		parent::__construct();
+		$u_id = $this->session->userdata('u_id');
+		if ($u_id != NULL) {
+			// redirect(base_url('user_home'),'refresh');
+			echo "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal";
+			redirect(base_url('user_home'));
+
+		}
+	}
 
 	public function index()
 	{
@@ -46,6 +56,7 @@ class Welcome extends CI_Controller {
 		$data['carosul_on'] = true;
 		$data['top3_on'] = true;
 		$data['carosul_404'] = true;
+		$data['user_loging_form']=$this->load->view('user/login',$data,true);
 
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
@@ -68,6 +79,7 @@ class Welcome extends CI_Controller {
 		$data['carosul_on'] = false;
 		$data['top3_on'] = false;
 
+		$data['user_loging_form']=$this->load->view('user/login',$data,true);
 
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
@@ -87,6 +99,7 @@ class Welcome extends CI_Controller {
 		$data['carosul_on'] = false;
 		$data['carosul_404'] = false;
 		$data['top3_on'] = false;
+		$data['user_loging_form']=$this->load->view('user/login',$data,true);
 
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
@@ -96,6 +109,50 @@ class Welcome extends CI_Controller {
 		$this->load->view('home_view',$data);
 
 	}
+
+
+	public function login_check(){
+		$rules = array(
+			"u_email" => array(
+				'field'=> 'u_email',
+				'label'=> 'email',
+				'rules'=> 'trim|required|valid_email'
+			),
+			"u_password" => array(
+				'field'=> 'u_password',
+				'label'=> 'password',
+				'rules'=> 'required|max_length[150]|min_length[5]'
+			),
+		);
+		//set rules
+		$this->form_validation->set_rules($rules);
+		// if validation failed
+		if($this->form_validation->run()!= true){
+			//get error message from violating form rules
+			$sdata = array();
+			$sdata['error']= form_error('u_email','<span style="color:red;background-color:pink;">','</span>').form_error('u_password','<span style="color:red;background-color:pink;">','</span>');
+			$this->session->set_userdata($sdata);
+			redirect('welcome');
+		}
+		else{
+			// if validation successed
+			$email = $this->input->post('u_email');
+			$password = $this->input->post('u_password');
+			$result = $this->welcome_model->check_user_exist($email,$password);
+			if ($result) {
+				$sdata = array();
+				$sdata['u_id']= $result->u_id;
+				// $sdata['u_id']= 1;
+				$sdata['u_name']= $result->u_name;
+				$this->session->set_userdata($sdata);
+				redirect('user_home');
+			}else{
+				redirect('welcome');
+			}
+		}
+	}
+
+
 
 
 
