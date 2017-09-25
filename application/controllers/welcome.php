@@ -6,7 +6,6 @@ class Welcome extends CI_Controller {
 		$u_id = $this->session->userdata('u_id');
 		if ($u_id != NULL) {
 			redirect(base_url('user_home'));
-
 		}
 	}
 
