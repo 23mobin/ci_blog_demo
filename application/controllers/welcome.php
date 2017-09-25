@@ -1,13 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 session_start();
 class Welcome extends CI_Controller {
-	public function __construct(){
-		parent::__construct();
-		$u_id = $this->session->userdata('u_id');
-		if ($u_id != NULL) {
-			redirect(base_url('user_home'));
-		}
-	}
+	// public function __construct(){
+	// 	parent::__construct();
+	// 	$u_id = $this->session->userdata('u_id');
+	// 	if ($u_id != NULL) {
+	// 		redirect(base_url('user_home'));
+	// 	}
+	// }
 
 	public function index()
 	{
@@ -127,7 +127,7 @@ class Welcome extends CI_Controller {
 		if($this->form_validation->run()!= true){
 			//get error message from violating form rules
 			$sdata = array();
-			$sdata['error']= form_error('u_email','<span style="color:red;background-color:pink;">','</span>').form_error('u_password','<span style="color:red;background-color:pink;">','</span>');
+			$sdata['error']= form_error('u_email','<span style="color:red;">','</span>').form_error('u_password','<span style="color:red;">','</span>');
 			$this->session->set_userdata($sdata);
 			redirect('welcome');
 		}

@@ -36,9 +36,9 @@
             <li><a href="fashion.html">Fashion</a></li>
             <!-- <li><a href="music.html">Music</a></li> -->
             <li><a href="codes.html">Codes</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a id ="myBtn" data-toggle="modal" data-target="#myModal">Sign in</a></li>
             <li class="dropdown">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+              <a href="#" data-toggle="dropdown" backdrop="static" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -60,4 +60,21 @@
     </ul>
   </div>
   <div class="clearfix"> </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Enter Your Credintials</h4>
+        </div>
+        <div class="modal-body">
+          <?php $u_id = $this->session->userdata('u_id');
+        	echo (($u_id != NULL)?" you are already looged in":$user_loging_form);
+          ?>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>

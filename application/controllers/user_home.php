@@ -5,7 +5,7 @@ class User_home extends CI_Controller {
     parent::__construct();
     $u_id = $this->session->userdata('u_id');
     if ($u_id == NULL) {
-      redirect(base_url(),'refresh');
+      redirect(base_url());
     }
   }
 
