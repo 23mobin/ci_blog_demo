@@ -40,7 +40,8 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['welcome/view_article']="welcome";
+$route['welcome/view_article']="welcome/page_404";
+// $route['welcome/view_article/0']="welcome/page_404";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

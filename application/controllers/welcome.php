@@ -45,6 +45,7 @@ class Welcome extends CI_Controller {
     $data['logo_on'] = true;
 		$data['carosul_on'] = true;
 		$data['top3_on'] = true;
+		$data['carosul_404'] = true;
 
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
@@ -58,15 +59,39 @@ class Welcome extends CI_Controller {
 	public function view_article($blog_id)
 	{
 		$data = array();
+		$data['carosul_404'] = true;
 		$data['pb_b_id'] = $this->welcome_model->read_published_blog_by_id($blog_id);
+		if (empty($data['pb_b_id'])) {
+			 redirect(base_url('welcome/page_404'));
+		}else{
 		$data['logo_on'] = false;
 		$data['carosul_on'] = false;
 		$data['top3_on'] = false;
+
 
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
 		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
 		$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
+
+		$this->load->view('home_view',$data);
+
+	}
+
+	}
+	public function page_404()
+	{
+		$data = array();
+
+		$data['logo_on'] = false;
+		$data['carosul_on'] = false;
+		$data['carosul_404'] = false;
+		$data['top3_on'] = false;
+
+		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
+		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
+		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
+		$data['homepage_content']=$this->load->view('main_site/404',$data,true);
 
 		$this->load->view('home_view',$data);
 

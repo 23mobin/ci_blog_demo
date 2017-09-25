@@ -45,6 +45,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Carousel wrapper start-->
     <?php if($carosul_on == true):?>
       <?= $carosul;?>
+    <?php elseif($carosul_404==false):?>
+      <?= "";?>
     <?php else:?>
       <div class="banner-1"></div>
     <?php endif?>
