@@ -39,6 +39,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p><label class="of"></label>LET'S MAKE A PERFECT STYLE<label class="on"></label></p>
       </div>
     </div>
+    <div class="container">
+      <?= $user_loging_form;?>
+    </div>
   <?php endif;?>
   <!-- homepage wrapper start-->
   <div class="container-fluid bg-danger">
