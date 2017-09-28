@@ -68,32 +68,19 @@
     <div class="clearfix"> </div>
   </div>
 </div>
-<!-- category -->
 
+<!-- category -->
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
   <?php foreach($category_name as $cn):?>
-
-  <!-- <button type="button" id="<?= $cn->c_name;?>" class="btn btn-default"><?= $cn->c_name;?></button> -->
-
-  <!-- <button type="button" class="btn btn-default">2</button> -->
-
   <div class="btn-group" role="group">
     <button id="btnGroupDrop<?= $cn->c_id;?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <?= $cn->c_name;?>
     </button>
-    <?php
-
-    $sub_category = $this->user_model->get_category_child_by_id($cn->c_id);
-
-
-
-    ?>
+    <?php $sub_category = $this->user_model->get_category_child_by_id($cn->c_id);?>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop<?= $cn->c_id;?>">
-      <?php foreach($sub_category as $pn):
-        ?>
+      <?php foreach($sub_category as $pn):?>
       <li><a class="dropdown-item" href="#"><?= $pn->c_name;?></a></li>
-      <!-- <li><a class="dropdown-item" href="#">Dropdown link</a></li> -->
-    <?php endforeach;?>
+      <?php endforeach;?>
     </div>
   </div>
   <?php endforeach;?>
