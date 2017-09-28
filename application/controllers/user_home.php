@@ -12,7 +12,9 @@ class User_home extends CI_Controller {
 	public function index()
 	{
     $data = array();
+		$data['head']=$this->load->view('header',$data,true);
     $data['u_name']= $this->session->userdata('u_name');
+    $data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
     $data['u_id']= $this->session->userdata('u_id');
     $data['u_home_content']=$this->load->view('user/user_home_content',$data,true);
     $data['u_navbar']=$this->load->view('user/user_navbar_v',$data,true);

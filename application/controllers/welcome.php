@@ -12,6 +12,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data = array();
+		$data['head']=$this->load->view('header',$data,true);
 		$data['variable1']= "a value from controller";
 		$this->load->library('pagination');
 		$config['base_url'] = base_url('welcome/index');
@@ -67,6 +68,7 @@ class Welcome extends CI_Controller {
 	public function view_article($blog_id)
 	{
 		$data = array();
+		$data['head']=$this->load->view('header',$data,true);
 		$data['carosul_404'] = true;
 		$data['pb_b_id'] = $this->welcome_model->read_published_blog_by_id($blog_id);
 		if (empty($data['pb_b_id'])) {
@@ -91,6 +93,7 @@ class Welcome extends CI_Controller {
 	public function page_404()
 	{
 		$data = array();
+		$data['head']=$this->load->view('header',$data,true);
 
 		$data['logo_on'] = false;
 		$data['carosul_on'] = false;
