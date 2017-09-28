@@ -18,14 +18,23 @@ class User_model extends CI_Model {
   //   return $friends_id;
   // }
 
-  // public function friends_info_by_id($friends_id){
-  //   $this->db->select('*');
-  //   $this->db->from('users_info');
-  //   $this->db->where('u_id',$friends_id);
-  //   $query_result=$this->db->get();
-  //   $result = $query_result->result();
-  //   return $result;
-  // }
+  public function read_categories(){
+    $this->db->select('*');
+    $this->db->from('blog_category');
+    $this->db->where('c_parent_id',0);
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
+
+    public function get_category_child_by_id($id){
+      $this->db->select('*');
+      $this->db->from('blog_category');
+      $this->db->where('c_parent_id',$id);
+      $query_result=$this->db->get();
+      $result = $query_result->result();
+      return $result;
+    }
 
 
 

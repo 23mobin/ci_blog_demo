@@ -28,7 +28,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-
+  
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
         <nav class="link-effect-7" id="link-effect-7">
@@ -43,7 +43,7 @@
             <?php if ($u_id == NULL):?>
             <li><a id ="myBtn" data-toggle="modal" data-target="#myModal">Sign in</a></li>
           <?php else:?>
-            <li><a href="<?= base_url('user_home');?>"><h3><?= $u_name." ব্লগ ";?> <i class="glyphicon glyphicon-user text-success"></i></h3></a></li>
+            <li><a href="<?= base_url('user_home');?>"><h3><?= $u_name."'s ব্লগ ";?> <i class="glyphicon glyphicon-user text-success"></i></h3></a></li>
             <?php endif;?>
             <li class="dropdown">
               <a href="#" data-toggle="dropdown" backdrop="static" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
