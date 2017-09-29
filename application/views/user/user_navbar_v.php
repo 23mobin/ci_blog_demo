@@ -1,8 +1,3 @@
-<!-- <div class="navbar">
-  <a href="<?= base_url('user_home');?>">Home</a>
-  <a href="<?= base_url('user_home/page1');?>">Profile</a>
-  <a href="<?= base_url('user_home/logout');?>">logout</a>
-</div> -->
 <div class="header" id="ban">
   <div class="container">
     <div class="head-left">
@@ -21,7 +16,6 @@
     </div>
     <div class="header_right ">
       <nav class="navbar navbar-default ">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
@@ -38,11 +32,7 @@
               <li class="active act"><a href="<?= base_url();?>"><h3>প্রথমপাতা</h3></a></li>
               <li><a href="#"><h3>নির্বাচিত পোস্ট</h3></a></li>
               <li><a href="#"><h3>বিষয়ভিত্তিক ব্লগ</h3></a></li>
-              <!-- <li><a href="travel.html">Travel</a></li>
-              <li><a href="fashion.html">Fashion</a></li> -->
               <li><a href="<?= base_url('user_home');?>"><h3>হোমপেজ</h3></a></li>
-              <!-- <li><a href="codes.html">Codes</a></li> -->
-              <!-- <li><a id ="myBtn" data-toggle="modal" data-target="#myModal">Sign in</a></li> -->
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" backdrop="static" class="dropdown-toggle"><h3>প্রোফাইল <i class="glyphicon glyphicon-user text-success"></i></h3></a>
                 <ul class="dropdown-menu">
@@ -68,20 +58,21 @@
     <div class="clearfix"> </div>
   </div>
 </div>
-
-<!-- category -->
-<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  <?php foreach($category_name as $cn):?>
-  <div class="btn-group" role="group">
-    <button id="btnGroupDrop<?= $cn->c_id;?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <?= $cn->c_name;?>
-    </button>
-    <?php $sub_category = $this->user_model->get_category_child_by_id($cn->c_id);?>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop<?= $cn->c_id;?>">
-      <?php foreach($sub_category as $pn):?>
-      <li><a class="dropdown-item" href="#"><?= $pn->c_name;?></a></li>
-      <?php endforeach;?>
+<div class="container">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <?php foreach($category_name as $cn):?>
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop<?= $cn->c_id;?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <?= $cn->c_name;?>
+      </button>
+      <?php $sub_category = $this->user_model->get_category_child_by_id($cn->c_id);?>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop<?= $cn->c_id;?>">
+        <?php foreach($sub_category as $pn):?>
+        <li><a class="dropdown-item" href="#"><?= $pn->c_name;?></a></li>
+        <?php endforeach;?>
+      </div>
     </div>
+    <?php endforeach;?>
   </div>
-  <?php endforeach;?>
 </div>
+<!-- category -->
