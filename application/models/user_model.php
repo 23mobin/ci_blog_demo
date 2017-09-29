@@ -27,14 +27,39 @@ class User_model extends CI_Model {
     return $result;
   }
 
-    public function get_category_child_by_id($id){
-      $this->db->select('*');
-      $this->db->from('blog_category');
-      $this->db->where('c_parent_id',$id);
-      $query_result=$this->db->get();
-      $result = $query_result->result();
-      return $result;
-    }
+  public function get_category_child_by_id($id){
+    $this->db->select('*');
+    $this->db->from('blog_category');
+    $this->db->where('c_parent_id',$id);
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
+
+  public function count_blog_by_authore_id($id){
+
+    $this->db->select('blog_id');
+    $this->db->from('blogs');
+    // $this->db->where('blog_published_status',1);
+    $this->db->where('blog_authore_id',$id);
+    $this->db->order_by('blog_id','asc');
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
+
+  public function read_authores_blog_with_limit_ofset($limit,$ofset,$id){
+
+    $this->db->select('*');
+    $this->db->from('blogs');
+    // $this->db->where('blog_published_status',1);
+    $this->db->where('blog_authore_id',$id);
+    $this->db->order_by('blog_date','desc');
+    $this->db->limit($limit,$ofset);
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
 
 
 

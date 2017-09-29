@@ -16,8 +16,52 @@ class User_home extends CI_Controller {
     $data['u_name']= $this->session->userdata('u_name');
     // $data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
     $data['u_id']= $this->session->userdata('u_id');
+    $id= $this->session->userdata('u_id');
 
     $data['category_name'] = $this->user_model->read_categories();
+
+    // FOR BLOG POST BY USER IN USERS HOMEPAGE
+
+    $this->load->library('pagination');
+		$config['base_url'] = base_url('user_home/index');
+		$config['total_rows'] = count($this->user_model->count_blog_by_authore_id($id));
+		// echo $config['total_rows'];
+		// exit();
+    $config['per_page'] =6;
+    $config['uri_segment'] = 3;
+		//config for bootstrap pagination class integration
+    $config['full_tag_open'] = '<ul class="pagination pagination-lg">';
+    $config['full_tag_close'] = '</ul>';
+    $config['first_link'] = false;
+    $config['last_link'] = false;
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['prev_link'] = '<span  aria-hidden="true"><<</span>';
+    $config['prev_tag_open'] = '<li class="prev">';
+    $config['prev_tag_close'] = '</li>';
+    $config['next_link'] = '<span  aria-hidden="true">>></span>';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li class="active "><a href="#">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';
+
+
+
+
+		$this->pagination->initialize($config);
+		$limit = $config['per_page'];
+		$offset = $this->uri->segment(3);
+
+    $data['authore_home_paginations'] = $this->pagination->create_links();
+		// $data['pinned_blogs'] = $this->welcome_model->read_pin_blog_max_views();
+		$data['authore_blogs'] = $this->user_model->read_authores_blog_with_limit_ofset($limit,$offset,$id);
+
+
+
 
 
 
