@@ -5,7 +5,7 @@
   <div class="single">
     <img src="<?= base_url($pb_b_id->blog_image);?>" class="img-responsive" alt=""><hr>
     <div class="b-bottom">
-      লিখেছেন <span class="text-danger text-bold top"><?= $this->welcome_model->authore_name_by_id($pb_b_id->blog_authore_id);?></span>
+      <h3>লিখেছেন <span class="text-danger text-bold top"><?= $this->welcome_model->authore_name_by_id($pb_b_id->blog_authore_id);?></span> <spam class="pull-right"><?= "ক্যাটাগরিঃ ".$this->welcome_model->category_by_category_id($pb_b_id->blog_category_id)?></spam></h3>
       <p class="sub text-justify"><?= sanitize($pb_b_id->blog_body);?></p>
       <p><?= pretty_date($pb_b_id->blog_date);?><a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span><?= $pb_b_id->blog_view_counts;?> </a></p>
     </div>

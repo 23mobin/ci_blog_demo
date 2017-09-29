@@ -43,12 +43,21 @@ class Welcome_model extends CI_Model {
   }
   public function authore_name_by_id($id){
 
-    $this->db->select('name');
-    $this->db->from('admin_info');
-    $this->db->where('id',$id);
+    $this->db->select('u_name');
+    $this->db->from('users_info');
+    $this->db->where('u_id',$id);
     $query_result=$this->db->get();
     $result = $query_result->row();
-    return $result->name;
+    return $result->u_name;
+  }
+  public function category_by_category_id($id){
+
+    $this->db->select('c_name');
+    $this->db->from('blog_category');
+    $this->db->where('c_id',$id);
+    $query_result=$this->db->get();
+    $result = $query_result->row();
+    return $result->c_name;
   }
   public function read_published_blog_by_id($blog_id){
 
