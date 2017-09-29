@@ -18,6 +18,8 @@ class User_home extends CI_Controller {
     $data['u_id']= $this->session->userdata('u_id');
     $id= $this->session->userdata('u_id');
 
+
+
     $data['category_name'] = $this->user_model->read_categories();
 
     // FOR BLOG POST BY USER IN USERS HOMEPAGE
@@ -59,26 +61,38 @@ class User_home extends CI_Controller {
     $data['authore_home_paginations'] = $this->pagination->create_links();
 		// $data['pinned_blogs'] = $this->welcome_model->read_pin_blog_max_views();
 		$data['authore_blogs'] = $this->user_model->read_authores_blog_with_limit_ofset($limit,$offset,$id);
-
-
-
-
-
-
+    $data['categories']=$this->load->view('user/user_category_nav_v',$data,true);
 
     $data['u_home_content']=$this->load->view('user/user_home_content',$data,true);
     $data['u_navbar']=$this->load->view('user/user_navbar_v',$data,true);
 		$this->load->view('user/user_home_v',$data);
   }
-  public function page1()
-	{
+
+
+
+
+
+
+  public function blogs($category_id){
+
     $data = array();
+		$data['head']=$this->load->view('header',$data,true);
     $data['u_name']= $this->session->userdata('u_name');
+    // $data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
     $data['u_id']= $this->session->userdata('u_id');
-    $data['u_home_content']=$this->load->view('user/user_page1',$data,true);
+    $user_id= $this->session->userdata('u_id');
+
+    $data['category_name'] = $this->user_model->read_categories();
+    $data['category_blogs'] = $this->user_model->read_user_blog_by_category_id($category_id,$user_id);
+    $data['categories']=$this->load->view('user/user_category_nav_v',$data,true);
+
+
+    $data['u_home_content']=$this->load->view('user/user_blogs_categories_v',$data,true);
     $data['u_navbar']=$this->load->view('user/user_navbar_v',$data,true);
 		$this->load->view('user/user_home_v',$data);
-}
+
+  }
+
 
   public function logout()
 	{

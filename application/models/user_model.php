@@ -61,6 +61,18 @@ class User_model extends CI_Model {
     return $result;
   }
 
+  public function read_user_blog_by_category_id($category_id,$user_id){
+
+    $this->db->select('*');
+    $this->db->from('blogs');
+    $this->db->where('blog_authore_id',$user_id);
+    $this->db->where('blog_category_id',$category_id);
+    $this->db->order_by('blog_id','asc');
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
+
 
 
 
