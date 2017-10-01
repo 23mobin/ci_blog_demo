@@ -28,14 +28,14 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-  
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
         <nav class="link-effect-7" id="link-effect-7">
           <ul class="nav navbar-nav">
             <li class="active act"><a href="<?= base_url();?>"><h3>প্রথমপাতা</h3></a></li>
             <li><a href="#"><h3>নির্বাচিত পোস্ট</h3></a></li>
-            <li><a href="#"><h3>বিষয়ভিত্তিক ব্লগ</h3></a></li>
+            <li><a href="<?= base_url('welcome/blog_by_all_categories');?>"><h3>বিষয়ভিত্তিক ব্লগ</h3></a></li>
             <!-- <li><a href="travel.html">Travel</a></li>
             <li><a href="fashion.html">Fashion</a></li> -->
             <!-- <li><a href="music.html">Music</a></li> -->

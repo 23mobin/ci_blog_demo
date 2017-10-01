@@ -65,49 +65,86 @@ class Welcome extends CI_Controller {
 	}
 
 
-	public function view_article($blog_id)
-	{
+	public function view_article($blog_id){
 		$data = array();
 		$data['head']=$this->load->view('header',$data,true);
 		$data['carosul_404'] = true;
 		$data['pb_b_id'] = $this->welcome_model->read_published_blog_by_id($blog_id);
 		if (empty($data['pb_b_id'])) {
-			 redirect(base_url('welcome/page_404'));
+			redirect(base_url('welcome/page_404'));
 		}else{
-		$data['logo_on'] = false;
-		$data['carosul_on'] = false;
-		$data['top3_on'] = false;
-
-		$data['user_loging_form']=$this->load->view('user/login',$data,true);
-
-		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
-		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
-		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
-		$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
-
-		$this->load->view('home_view',$data);
-
+			$data['logo_on'] = false;
+			$data['carosul_on'] = false;
+			$data['top3_on'] = false;
+			$data['user_loging_form']=$this->load->view('user/login',$data,true);
+			$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
+			$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
+			$data['top3'] = $this->load->view('main_site/top_3',$data,true);
+			$data['homepage_content']=$this->load->view('main_site/single_page_content',$data,true);
+			$this->load->view('home_view',$data);
+	  }
 	}
 
-	}
 	public function page_404()
 	{
 		$data = array();
 		$data['head']=$this->load->view('header',$data,true);
-
+		$data['logo_on'] = false;
+		$data['carosul_on'] = false;
+		$data['carosul_404'] = false;
+		$data['top3_on'] = false;
+		$data['user_loging_form']=$this->load->view('user/login',$data,true);
+		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
+		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
+		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
+		$data['homepage_content']=$this->load->view('main_site/404',$data,true);
+		$this->load->view('home_view',$data);
+	}
+	public function blog_by_all_categories()
+	{
+		$data = array();
+		$data['head']=$this->load->view('header',$data,true);
 		$data['logo_on'] = false;
 		$data['carosul_on'] = false;
 		$data['carosul_404'] = false;
 		$data['top3_on'] = false;
 		$data['user_loging_form']=$this->load->view('user/login',$data,true);
 
+
+		$data['category_name'] = $this->welcome_model->get_parent_category();
+
+
+
 		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
 		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
 		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
-		$data['homepage_content']=$this->load->view('main_site/404',$data,true);
-
+		$data['category_nav'] = $this->load->view('main_site/category_nav_v',$data,true);
+		$data['posts'] = $this->welcome_model->get_random_blog_posts(12);
+		$data['homepage_content']=$this->load->view('main_site/all_category_view',$data,true);
 		$this->load->view('home_view',$data);
+	}
+	public function blog_by_category($category_id)
+	{
+		$data = array();
+		$data['head']=$this->load->view('header',$data,true);
+		$data['logo_on'] = false;
+		$data['carosul_on'] = false;
+		$data['carosul_404'] = false;
+		$data['top3_on'] = false;
+		$data['user_loging_form']=$this->load->view('user/login',$data,true);
 
+
+		$data['category_name'] = $this->welcome_model->get_parent_category();
+
+
+
+		$data['navbar'] = $this->load->view('main_site/navbar_view',$data,true);
+		$data['carosul'] = $this->load->view('main_site/carosul_view',$data,true);
+		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
+		$data['category_nav'] = $this->load->view('main_site/category_nav_v',$data,true);
+		$data['posts'] = $this->welcome_model->get_blog_posts_by_category_id($category_id);
+		$data['homepage_content']=$this->load->view('main_site/all_category_view',$data,true);
+		$this->load->view('home_view',$data);
 	}
 
 
