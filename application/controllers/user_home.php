@@ -20,7 +20,7 @@ class User_home extends CI_Controller {
 
 
 
-    $data['category_name'] = $this->user_model->read_categories();
+    $data['category_name'] = $this->user_model->read_categories($id);
 
     // FOR BLOG POST BY USER IN USERS HOMEPAGE
 
@@ -82,7 +82,7 @@ class User_home extends CI_Controller {
     $data['u_id']= $this->session->userdata('u_id');
     $user_id= $this->session->userdata('u_id');
 
-    $data['category_name'] = $this->user_model->read_categories();
+    $data['category_name'] = $this->user_model->read_categories($user_id);
     $data['category_blogs'] = $this->user_model->read_user_blog_by_category_id($category_id,$user_id);
     $data['categories']=$this->load->view('user/user_category_nav_v',$data,true);
 
