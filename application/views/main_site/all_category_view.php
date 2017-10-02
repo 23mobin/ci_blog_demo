@@ -1,10 +1,13 @@
-
+<?php $error="";
+     $error = $this->session->userdata('page_not_found');?>
 <div class="w3agile-1">
 	<div class="welcome">
-		<?= $category_nav;?>
+		<?= $category_nav;?><?= ((!empty($error))?$error:"")?>
 	</div>
 	<div class="team">
-		<h3 class="team-heading">টপ ১২ </h3>
+		<h3 class="team-heading"><?= (($this->uri->segment(2) == "blog_by_all_categories")?"টপ ১২":$this->welcome_model->category_by_category_id($this->uri->segment(3)));?> </h3>
+		<?php $this->session->unset_userdata('page_not_found');
+		  $error="";?>
 		<div class="team-grids">
 			<?php $count = 0;
 			foreach($posts as $r):
@@ -26,3 +29,7 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$("#hideit").delay(1000).fadeOut(300);
+
+</script>

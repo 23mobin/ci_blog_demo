@@ -143,8 +143,16 @@ class Welcome extends CI_Controller {
 		$data['top3'] = $this->load->view('main_site/top_3',$data,true);
 		$data['category_nav'] = $this->load->view('main_site/category_nav_v',$data,true);
 		$data['posts'] = $this->welcome_model->get_blog_posts_by_category_id($category_id);
-		$data['homepage_content']=$this->load->view('main_site/all_category_view',$data,true);
-		$this->load->view('home_view',$data);
+		if(empty($data['posts'])){
+			$sdata = array();
+			$sdata['page_not_found']= '<span id="hideit" class="alert alert-danger pull-right">This <strong>category</strong> does not have any post yet</span>';
+			$this->session->set_userdata($sdata);
+
+			redirect(base_url('welcome/blog_by_all_categories'));
+		}else{
+		  $data['homepage_content']=$this->load->view('main_site/all_category_view',$data,true);
+		  $this->load->view('home_view',$data);
+		}
 	}
 
 
