@@ -14,10 +14,12 @@
 				$count++;?>
 				<div class="col-md-4 team-grid">
 					<div class="team-grid1">
-						<img src="<?= base_url().$r->blog_image;?>" alt=" " class="img-responsive">
+            <a class="label pull-left text-left" href="<?= base_url().'welcome/view_article/'.$r->blog_id?>" style="background-color:#FA4B2A;text-decoration:none;"><h4> Total views: <?= $r->blog_view_counts;?> </h4></a>
+						<a  href="<?= base_url().'welcome/view_article/'.$r->blog_id?>"><img  src="<?= base_url().$r->blog_image;?>" alt=" " class="img-responsive">
 						<div class="p-mask">
-							<p><a href="<?= base_url().'welcome/view_article/'.$r->blog_id?>" style="color:white;text-decoration:none;"><?= readmore(10,$r->blog_title);?></a></p>
+							<p><a href="<?= base_url().'welcome/view_article/'.$r->blog_id?>" style="color:white;text-decoration:none;"><?= readmore(30,$r->blog_title);?></a></p>
 						</div>
+            </a>
 					</div>
 				</div>
 				<?php if($count % 3 == 0):?>

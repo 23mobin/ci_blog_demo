@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="row text-center text-bold"><?= $u_name?> এর ক্যাটাগরি </div>
   <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
     <?php foreach($category_name as $category):?>
     <div class="btn-group" role="group">

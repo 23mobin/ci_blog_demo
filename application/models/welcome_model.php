@@ -46,7 +46,7 @@ class Welcome_model extends CI_Model {
 
   public function get_blog_posts_by_category_id($category_id){
 
-    $this->db->select('blog_id,blog_category_id,blog_title,blog_image');
+    $this->db->select('blog_id,blog_category_id,blog_title,blog_image,blog_view_counts');
     $this->db->from('blogs');
     $this->db->where('blog_published_status',1);
     $this->db->where('blog_category_id',$category_id);

@@ -2,7 +2,7 @@
   <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
     <?php foreach($category_name as $category):?>
     <div class="btn-group" role="group">
-      <button id="btnGroupDrop<?= $category->c_id;?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupDrop<?= $category->c_id;?>" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="ture">
         <?= $category->c_name;?>
       </button>
       <?php $sub_category = $this->welcome_model->get_child_parent_id($category->c_id);?>

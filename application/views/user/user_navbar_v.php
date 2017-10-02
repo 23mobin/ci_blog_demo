@@ -31,7 +31,7 @@
             <ul class="nav navbar-nav">
               <li class="active act"><a href="<?= base_url();?>"><h3>প্রথমপাতা</h3></a></li>
               <li><a href="#"><h3>নির্বাচিত পোস্ট</h3></a></li>
-              <li><a href="#"><h3>বিষয়ভিত্তিক ব্লগ</h3></a></li>
+              <li><a href="<?= base_url('welcome/blog_by_all_categories');?>"><h3>বিষয়ভিত্তিক ব্লগ</h3></a></li>
               <li><a href="<?= base_url('user_home');?>"><h3>হোমপেজ</h3></a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" backdrop="static" class="dropdown-toggle"><h3>প্রোফাইল <i class="glyphicon glyphicon-user text-success"></i></h3></a>
