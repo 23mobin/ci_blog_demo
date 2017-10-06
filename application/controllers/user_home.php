@@ -115,6 +115,30 @@ class User_home extends CI_Controller {
     $this->load->view('user/user_home_v',$data);
 
   }
+  public function do_upload(){
+
+    $config['upload_path'] = './images';
+    $config['allowed_types'] = 'gif|jpg|jpeg|png';
+    $config['max_width'] = '1024';
+    $config['max_height'] = '786';
+    $this->load->library('upload',$config);
+
+    if(!$this->upload->do_upload('userfile')){
+      $error = array(
+        'error' => $this->upload->display_errors()
+      );
+      echo $error['error'];
+    }else{
+      $data  = array(
+        'upload_data' => $this->upload->data()
+      );
+      $image_path = "image/".$data['upload_data']['orig_name'];
+      // var_dump($data);
+      echo $image_path;
+      exit();
+    }
+
+  }
 
 
   public function logout()

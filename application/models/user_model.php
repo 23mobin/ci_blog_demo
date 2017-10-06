@@ -32,6 +32,16 @@ class User_model extends CI_Model {
     $result = $query_result->row();
     return $result->c_name;
   }
+  public function get_child_category_name(){
+    $this->db->select('*');
+    $this->db->from('blog_category');
+    $this->db->where('c_parent_id !=',0);
+    $this->db->order_by('c_name','ASC');
+
+    $query_result=$this->db->get();
+    $result = $query_result->result();
+    return $result;
+  }
 
   public function count_blog_by_authore_id($id){
 
