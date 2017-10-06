@@ -52,8 +52,6 @@ class User_home extends CI_Controller {
     $config['num_tag_close'] = '</li>';
 
 
-
-
     $this->pagination->initialize($config);
     $limit = $config['per_page'];
     $offset = $this->uri->segment(3);
