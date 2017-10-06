@@ -15,7 +15,6 @@ class Super_admin extends CI_Controller {
 		$data['variable1']= "admin dashboard";
     $data['admin_name']= $this->session->userdata('admin_name');
 		$data['admin_home_content']=$this->load->view('admin/admin_home_content',$data,true);
-
 		$this->load->view('admin/admin_dashboard',$data);
 
   }
